@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    font-family: cursive;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.container{
+    height: 75vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(50, 50, 50);
+}
+
+.dice{
+    height: 200px;
+    width:200px;
+    position:relative;
+    transform-style: preserve-3d;
+    transform: rotatex(30deg) rotatey(137deg) rotatez(0deg);
+    transition: 2s;
+}
+
+.face{
+    position: absolute;
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: baseline;
+     font-size:85px; 
+     color: black; 
+     background-color: #e1dbdb;
+    border: 4px solid grey;
+    box-shadow: 0 0 40px -8px grey, 0 0 20px -5px black;
+    border-radius:22px;
+}
+
+#front{
+    /* background-color: red; */
+    transform: translateZ(100px);
+}
+#back{
+    /* background-color: yellow; */
+    transform: translateZ(-100px);
+}
+#left{
+    /* background-color: green; */
+    transform: translatex(-50%) rotatey(90deg);
+}
+#right{
+    /* background-color: pink; */
+    transform: translatex(50%) rotatey(90deg);
+}
+#top{
+    /* background-color: skyblue; */
+    transform: translatey(-50%) rotatex(90deg);
+}
+#bottom{
+    /* background-color: coral; */
+    transform: translatey(50%) rotatex(90deg);
+}
+
+.rolls{
+    width:100%;
+    height:70px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rolls-num{
+    margin-top:20px;
+    width:50px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:18px;
+    font-family: cursive;
+    background-color: rgb(234,228,228);
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#one{
+    background-color: red;
+}
+#two{
+    background-color: yellow;
+}
+#three{
+    background-color: green;
+}
+#four{
+    background-color: pink;
+}
+#five{
+    background-color: skyblue;
+}
+#six{
+    background-color: coral;
+}
+
+
+#one:hover{
+    background-color: rgb(230, 49, 49);
+}
+#two:hover{
+    background-color: rgb(237, 237, 34);
+}
+#three:hover{
+    background-color: rgb(34, 182, 34);
+}
+#four:hover{
+    background-color: rgb(243, 161, 174);
+}
+#five:hover{
+    background-color: rgb(92, 194, 235);
+}
+#six:hover{
+    background-color: rgb(232, 100, 52);
+}
